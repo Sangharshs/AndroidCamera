@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".VideoRecorderActivity">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/cancelBtn"
+            android:src="@drawable/close_24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <ImageButton
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/flashBtn"
+            android:src="@drawable/ic_baseline_flash_off_24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+
+    </LinearLayout>
+    <androidx.camera.view.PreviewView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+<LinearLayout
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp">
+
+    <ImageButton
+        android:layout_marginStart="20dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/openGalleryBtn"
+        android:src="@drawable/flip_camea_24"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+    <ImageButton
+        android:id="@+id/startRecording"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/viewFinder"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded_btn"
+        android:text="START RECORDING"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+      />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center|end"
+        android:background="@android:color/transparent"
+        android:id="@+id/flipcameraBtn"
+        android:src="@drawable/flip_camea_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fraghere"/>
+
+</RelativeLayout>
